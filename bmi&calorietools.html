@@ -1,0 +1,273 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fitness Tools - Pulse Fitness Centre</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #ff5722;
+            text-align: center;
+            padding: 12px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: black;
+        }
+
+        .container {
+            padding: 30px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #ff5722;
+        }
+
+        .tools {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            width: 300px;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+        }
+
+        input, select {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #222;
+        }
+
+        .result {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #ff5722;
+        }
+
+        .note {
+            font-size: 13px;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        @media screen and (max-width: 600px) {
+            nav a {
+                display: block;
+                margin: 10px;
+            }
+
+            .card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Pulse Fitness Centre</h1>
+        <p>Explore Our Fitness Tools</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="programs.html">Programs</a>
+        <a href="trainers.html">Trainers</a>
+        <a href="plans.html">Membership</a>
+        <a href="tools.html">Fitness Tools</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Main Section -->
+    <div class="container">
+
+        <h2>Fitness Calculator Tools</h2>
+
+        <p>
+            Use these simple tools to explore fitness calculations.
+        </p>
+
+        <div class="tools">
+
+            <!-- BMI Calculator -->
+            <div class="card">
+
+                <h3>BMI Calculator</h3>
+
+                <p>Enter your height and weight.</p>
+
+                <input type="number" id="height"
+                    placeholder="Height in cm">
+
+                <input type="number" id="weight"
+                    placeholder="Weight in kg">
+
+                <br>
+
+                <button onclick="calculateBMI()">
+                    Calculate BMI
+                </button>
+
+                <p id="bmiResult" class="result"></p>
+
+            </div>
+
+            <!-- Calorie Estimator -->
+            <div class="card">
+
+                <h3>Calorie Estimator</h3>
+
+                <p>Enter details for a rough energy estimate.</p>
+
+                <input type="number" id="age"
+                    placeholder="Age in years">
+
+                <input type="number" id="calHeight"
+                    placeholder="Height in cm">
+
+                <input type="number" id="calWeight"
+                    placeholder="Weight in kg">
+
+                <select id="activity">
+                    <option value="1.2">Low activity</option>
+                    <option value="1.375">Light activity</option>
+                    <option value="1.55">Moderate activity</option>
+                    <option value="1.725">High activity</option>
+                </select>
+
+                <br>
+
+                <button onclick="calculateCalories()">
+                    Estimate Calories
+                </button>
+
+                <p id="calorieResult" class="result"></p>
+
+            </div>
+
+        </div>
+
+        <p class="note">
+            Note: These tools provide general educational estimates only.
+            BMI and calorie calculations may not be suitable for everyone,
+            particularly teenagers. They are not medical advice.
+        </p>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            &copy; 2026 Pulse Fitness Centre.
+            All Rights Reserved.
+        </p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+
+        // BMI Calculator
+        function calculateBMI() {
+
+            let height = Number(document.getElementById("height").value);
+            let weight = Number(document.getElementById("weight").value);
+
+            if (height <= 0 || weight <= 0) {
+                document.getElementById("bmiResult").innerHTML =
+                    "Please enter valid height and weight.";
+                return;
+            }
+
+            let heightInMeters = height / 100;
+            let bmi = weight / (heightInMeters * heightInMeters);
+
+            document.getElementById("bmiResult").innerHTML =
+                "Your calculated BMI is: " + bmi.toFixed(2);
+        }
+
+        // Calorie Estimator
+        function calculateCalories() {
+
+            let age = Number(document.getElementById("age").value);
+            let height = Number(document.getElementById("calHeight").value);
+            let weight = Number(document.getElementById("calWeight").value);
+            let activity = Number(document.getElementById("activity").value);
+
+            if (age <= 0 || height <= 0 || weight <= 0) {
+                document.getElementById("calorieResult").innerHTML =
+                    "Please enter valid details.";
+                return;
+            }
+
+            // Simple educational estimate
+            let calories = (10 * weight) + (6.25 * height)
+                         - (5 * age) - 161;
+
+            calories = calories * activity;
+
+            document.getElementById("calorieResult").innerHTML =
+                "Estimated daily energy: " +
+                Math.round(calories) + " kcal";
+        }
+
+    </script>
+
+</body>
+</html>

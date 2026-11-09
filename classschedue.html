@@ -1,0 +1,311 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Class Schedule - Pulse Fitness Centre</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Header */
+        header {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #ff5722;
+            text-align: center;
+            padding: 12px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: black;
+        }
+
+        /* Main Section */
+        .container {
+            padding: 30px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #ff5722;
+            font-size: 30px;
+        }
+
+        /* Schedule Table */
+        table {
+            width: 90%;
+            margin: 25px auto;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 0 10px #ccc;
+        }
+
+        th {
+            background-color: #ff5722;
+            color: white;
+            padding: 15px;
+        }
+
+        td {
+            padding: 12px;
+            border: 1px solid #ddd;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        /* Filter Section */
+        select {
+            padding: 10px;
+            margin: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #222;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 600px) {
+            nav a {
+                display: block;
+                margin: 10px;
+            }
+
+            table {
+                width: 100%;
+                font-size: 12px;
+            }
+
+            th, td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Website Header -->
+    <header>
+        <h1>Pulse Fitness Centre</h1>
+        <p>Weekly Fitness Class Schedule</p>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="programs.html">Programs</a>
+        <a href="trainers.html">Trainers</a>
+        <a href="plans.html">Membership</a>
+        <a href="tools.html">Fitness Tools</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+
+        <h2>Our Weekly Class Schedule</h2>
+
+        <p>
+            Check the timings of our fitness classes
+            and plan your workout.
+        </p>
+
+        <!-- Day Filter -->
+        <label for="dayFilter">Select Day:</label>
+
+        <select id="dayFilter" onchange="filterSchedule()">
+            <option value="all">All Days</option>
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+        </select>
+
+        <!-- Schedule Table -->
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Time</th>
+                    <th>Class</th>
+                    <th>Trainer</th>
+                </tr>
+            </thead>
+
+            <tbody id="scheduleTable">
+
+                <tr>
+                    <td>Monday</td>
+                    <td>7:00 AM</td>
+                    <td>Yoga</td>
+                    <td>Priya Verma</td>
+                </tr>
+
+                <tr>
+                    <td>Monday</td>
+                    <td>5:00 PM</td>
+                    <td>Strength Training</td>
+                    <td>Rahul Sharma</td>
+                </tr>
+
+                <tr>
+                    <td>Tuesday</td>
+                    <td>8:00 AM</td>
+                    <td>Cardio Workout</td>
+                    <td>Arjun Singh</td>
+                </tr>
+
+                <tr>
+                    <td>Tuesday</td>
+                    <td>6:00 PM</td>
+                    <td>Zumba</td>
+                    <td>Neha Gupta</td>
+                </tr>
+
+                <tr>
+                    <td>Wednesday</td>
+                    <td>7:00 AM</td>
+                    <td>Yoga</td>
+                    <td>Priya Verma</td>
+                </tr>
+
+                <tr>
+                    <td>Wednesday</td>
+                    <td>5:00 PM</td>
+                    <td>Cardio Workout</td>
+                    <td>Arjun Singh</td>
+                </tr>
+
+                <tr>
+                    <td>Thursday</td>
+                    <td>8:00 AM</td>
+                    <td>Strength Training</td>
+                    <td>Rahul Sharma</td>
+                </tr>
+
+                <tr>
+                    <td>Thursday</td>
+                    <td>6:00 PM</td>
+                    <td>Zumba</td>
+                    <td>Neha Gupta</td>
+                </tr>
+
+                <tr>
+                    <td>Friday</td>
+                    <td>7:00 AM</td>
+                    <td>Yoga</td>
+                    <td>Priya Verma</td>
+                </tr>
+
+                <tr>
+                    <td>Friday</td>
+                    <td>5:00 PM</td>
+                    <td>Strength Training</td>
+                    <td>Rahul Sharma</td>
+                </tr>
+
+                <tr>
+                    <td>Saturday</td>
+                    <td>9:00 AM</td>
+                    <td>Zumba</td>
+                    <td>Neha Gupta</td>
+                </tr>
+
+                <tr>
+                    <td>Saturday</td>
+                    <td>5:00 PM</td>
+                    <td>Cardio Workout</td>
+                    <td>Arjun Singh</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            &copy; 2026 Pulse Fitness Centre.
+            All Rights Reserved.
+        </p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+
+        // Function to filter the class schedule
+        function filterSchedule() {
+
+            let selectedDay =
+                document.getElementById("dayFilter").value;
+
+            let rows =
+                document.getElementById("scheduleTable")
+                .getElementsByTagName("tr");
+
+            for (let i = 0; i < rows.length; i++) {
+
+                let day = rows[i].getElementsByTagName("td")[0]
+                    .innerHTML;
+
+                if (selectedDay == "all" || day == selectedDay) {
+                    rows[i].style.display = "";
+                }
+                else {
+                    rows[i].style.display = "none";
+                }
+            }
+        }
+
+    </script>
+
+</body>
+</html>

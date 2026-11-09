@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Trainers - Pulse Fitness Centre</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Header */
+        header {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #ff5722;
+            text-align: center;
+            padding: 12px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: black;
+        }
+
+        /* Trainers Section */
+        .container {
+            padding: 30px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #ff5722;
+            font-size: 30px;
+        }
+
+        .trainers {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        /* Trainer Cards */
+        .card {
+            background-color: white;
+            width: 250px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+        }
+
+        .card h3 {
+            color: #222;
+        }
+
+        .card p {
+            line-height: 1.5;
+        }
+
+        .speciality {
+            color: #ff5722;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 600px) {
+            nav a {
+                display: block;
+                margin: 10px;
+            }
+
+            .card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Website Header -->
+    <header>
+        <h1>Pulse Fitness Centre</h1>
+        <p>Meet Our Professional Trainers</p>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="programs.html">Programs</a>
+        <a href="trainers.html">Trainers</a>
+        <a href="plans.html">Membership</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+
+        <h2>Our Expert Trainers</h2>
+
+        <p>
+            Our trainers are here to guide and motivate you
+            throughout your fitness journey.
+        </p>
+
+        <div class="trainers">
+
+            <div class="card">
+                <h3>Rahul Sharma</h3>
+                <p class="speciality">Strength Training</p>
+                <p>
+                    Helps members learn safe exercise techniques
+                    and build strength through guided workouts.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Priya Verma</h3>
+                <p class="speciality">Yoga Instructor</p>
+                <p>
+                    Guides members through yoga exercises
+                    that support flexibility and relaxation.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Arjun Singh</h3>
+                <p class="speciality">Cardio Trainer</p>
+                <p>
+                    Helps members enjoy cardio activities
+                    and develop healthy exercise habits.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Neha Gupta</h3>
+                <p class="speciality">Zumba Instructor</p>
+                <p>
+                    Leads fun dance workouts with music
+                    and energetic movements.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            &copy; 2026 Pulse Fitness Centre.
+            All Rights Reserved.
+        </p>
+    </footer>
+
+</body>
+</html>

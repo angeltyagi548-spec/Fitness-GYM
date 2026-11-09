@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Membership Plans - Pulse Fitness Centre</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Header */
+        header {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #ff5722;
+            text-align: center;
+            padding: 12px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: black;
+        }
+
+        /* Membership Section */
+        .container {
+            padding: 30px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #ff5722;
+            font-size: 30px;
+        }
+
+        .plans {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        /* Plan Cards */
+        .card {
+            background-color: white;
+            width: 250px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+        }
+
+        .card h3 {
+            color: #222;
+        }
+
+        .price {
+            color: #ff5722;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .card li {
+            padding: 8px;
+        }
+
+        /* Join Button */
+        .button {
+            display: inline-block;
+            background-color: #ff5722;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .button:hover {
+            background-color: #222;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 600px) {
+            nav a {
+                display: block;
+                margin: 10px;
+            }
+
+            .card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Website Header -->
+    <header>
+        <h1>Pulse Fitness Centre</h1>
+        <p>Choose Your Membership Plan</p>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="programs.html">Programs</a>
+        <a href="trainers.html">Trainers</a>
+        <a href="plans.html">Membership</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+
+        <h2>Our Membership Plans</h2>
+
+        <p>
+            Choose a plan that suits your fitness journey.
+        </p>
+
+        <div class="plans">
+
+            <!-- Basic Plan -->
+            <div class="card">
+                <h3>Basic Plan</h3>
+
+                <p class="price">₹999</p>
+                <p>Per Month</p>
+
+                <ul>
+                    <li>Gym Access</li>
+                    <li>Basic Equipment</li>
+                    <li>Locker Facility</li>
+                    <li>Weekly Workout Guidance</li>
+                </ul>
+
+                <a href="contact.html" class="button">
+                    Join Now
+                </a>
+            </div>
+
+            <!-- Standard Plan -->
+            <div class="card">
+                <h3>Standard Plan</h3>
+
+                <p class="price">₹1,999</p>
+                <p>Per Month</p>
+
+                <ul>
+                    <li>Full Gym Access</li>
+                    <li>Group Fitness Classes</li>
+                    <li>Personal Trainer Guidance</li>
+                    <li>Locker Facility</li>
+                </ul>
+
+                <a href="contact.html" class="button">
+                    Join Now
+                </a>
+            </div>
+
+            <!-- Premium Plan -->
+            <div class="card">
+                <h3>Premium Plan</h3>
+
+                <p class="price">₹2,999</p>
+                <p>Per Month</p>
+
+                <ul>
+                    <li>Unlimited Gym Access</li>
+                    <li>All Fitness Classes</li>
+                    <li>Personal Training Sessions</li>
+                    <li>Priority Support</li>
+                </ul>
+
+                <a href="contact.html" class="button">
+                    Join Now
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            &copy; 2026 Pulse Fitness Centre.
+            All Rights Reserved.
+        </p>
+    </footer>
+
+</body>
+</html>

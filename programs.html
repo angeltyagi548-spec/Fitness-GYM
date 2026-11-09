@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fitness Programs</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #ff5722;
+            text-align: center;
+            padding: 12px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: black;
+        }
+
+        .container {
+            padding: 30px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #ff5722;
+        }
+
+        .programs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            width: 250px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+        }
+
+        .card h3 {
+            color: #222;
+        }
+
+        .card p {
+            line-height: 1.5;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        @media screen and (max-width: 600px) {
+            nav a {
+                display: block;
+                margin: 10px;
+            }
+
+            .card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Pulse Fitness Centre</h1>
+        <p>Choose Your Fitness Program</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="programs.html">Programs</a>
+        <a href="trainers.html">Trainers</a>
+        <a href="plans.html">Membership</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Programs Section -->
+    <div class="container">
+
+        <h2>Our Fitness Programs</h2>
+
+        <p>
+            Explore our programs and find the right activity
+            for your fitness journey.
+        </p>
+
+        <div class="programs">
+
+            <div class="card">
+                <h3>Strength Training</h3>
+                <p>
+                    Improve strength and fitness with
+                    guided weight training exercises.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Cardio Workout</h3>
+                <p>
+                    Enjoy activities like running,
+                    cycling, and aerobic exercises.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Yoga</h3>
+                <p>
+                    Practice yoga to improve flexibility,
+                    balance, and relaxation.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Zumba</h3>
+                <p>
+                    Enjoy energetic dance workouts
+                    with music and fun movements.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            &copy; 2026 Pulse Fitness Centre.
+            All Rights Reserved.
+        </p>
+    </footer>
+
+</body>
+</html>
